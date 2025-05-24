@@ -1,13 +1,21 @@
-name: helloworld
+name: build java and maven
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [MAIN]
+  pull_request:
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-       - name: Say Hello to the World
-         run: echo "Hello, World!"
-         
+       -  uses: actions/checkout@v4
+       
+       -  name: setup jdk 17
+          uses: actions/setup-java@v4
+
+       -   name: set up maven
+           run: maven -B package --file pom.xml
+        
