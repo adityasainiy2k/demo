@@ -15,6 +15,10 @@ jobs:
        
        -  name: setup jdk 17
           uses: actions/setup-java@v4
+          with:
+            java-version: '17'
+            distribution: 'temurin'
+
 
        -   name: set up maven
            run: maven -B package --file pom.xml
