@@ -1,0 +1,24 @@
+name: myng
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+    
+      - name: print your name and container you want to run
+        run: echo 'vikas running first container of nginx'
+
+      - name: install nginx
+        uses: nyurik/action-setup-nginx@v1
+        id: nginx
+        
+      
+  
+
