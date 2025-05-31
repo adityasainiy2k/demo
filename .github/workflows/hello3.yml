@@ -20,7 +20,7 @@ jobs:
         
   build-api:
     needs: builds  
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       run: echo 'testing the needs build'
       
