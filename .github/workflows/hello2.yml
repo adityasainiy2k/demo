@@ -17,7 +17,7 @@ jobs:
 
       - name: install nginx
         uses: nyurik/action-setup-nginx@v1
-        id: nginx
+        id: nginx 
         
       
   
