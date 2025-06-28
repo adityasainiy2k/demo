@@ -22,7 +22,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: static-file
-          path: ./.github/workflows
+          path: ./workflows
 
 
       - name: download artifacts
