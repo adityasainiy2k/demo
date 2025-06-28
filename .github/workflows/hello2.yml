@@ -18,6 +18,11 @@ jobs:
       - name: install nginx
         uses: nyurik/action-setup-nginx@v1
         id: nginx 
+
+      - name: upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: file-artifact
         
       
   
