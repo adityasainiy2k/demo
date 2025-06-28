@@ -14,6 +14,9 @@ jobs:
 
       - name: say hello3
         run: echo 'say hello3'
+
+      - name: download artifact
+        run: actions/download-artifacts@v3
         
   build-api:
     needs: builds  
