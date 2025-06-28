@@ -18,6 +18,18 @@ jobs:
       - name: say hello3
         run: echo 'say hello3'
 
+      - name: upload arctifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: static-file
+          path: .demo
+
+      - name: download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: static-file
+        
+
         
   build-api:
     needs: builds  
