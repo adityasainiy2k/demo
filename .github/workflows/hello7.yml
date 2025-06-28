@@ -18,22 +18,22 @@ jobs:
       - name: say hello3
         run: echo 'say hello3'
 
-      - name: upload arctifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: static-file
-          path: /.vikas1
-
-
-      - name: download artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: static-file
+ #     - name: upload arctifact
+  #      uses: actions/upload-artifact@v3
+  #      with:
+  #        name: static-file
+   #       path: /.vikas1
+#
+#
+#      - name: download artifacts
+#        uses: actions/download-artifact@v3
+#        with:
+#          name: static-file
         
 
         
-  build-api:
-    needs: builds  
-    runs-on: ubuntu-latest
-    steps:
-      run: echo 'testing the needs build last step'
+  #build-api:
+  #  needs: builds  
+   # runs-on: ubuntu-latest
+    #steps:
+     # run: echo 'testing the needs build last step'
